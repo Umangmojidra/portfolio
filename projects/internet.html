@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Internet Usage Tracker — Umang Mojidra</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css"><link rel="stylesheet" href="project-layout.css">
+</head><body>
+<div id="cursor-dot"></div><div id="cursor-ring"></div><div id="scroll-bar"></div>
+<nav id="navbar"><a href="../index.html" class="nav-logo">UM.</a><ul class="nav-links"><li><a href="../index.html#about">About</a></li><li><a href="../index.html#skills">Skills</a></li><li><a href="../index.html#projects" class="active">Projects</a></li><li><a href="../index.html#experience">Journey</a></li></ul><a href="../index.html#contact" class="nav-cta">Let's Talk →</a></nav>
+
+<div class="proj-hero" style="background:linear-gradient(160deg,#00101a,#001c2e,#050810);">
+  <div class="proj-hero-bg" style="background:radial-gradient(ellipse at 25% 50%,rgba(6,182,212,.22),transparent 60%)"></div>
+  <div class="proj-hero-inner">
+    <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+    <div class="proj-hero-tag">Analytics Tool · Python GUI · Network Monitoring</div>
+    <h1 class="proj-hero-title">Internet Usage<br><span style="background:linear-gradient(135deg,#06b6d4,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Tracker & Analytics</span></h1>
+    <p class="proj-hero-sub">A desktop analytics tool that tracks, analyses, and visualises internet usage patterns across departments — with real-time charts, productivity scoring, and automated executive reports.</p>
+    <div class="proj-meta-row">
+      <span class="meta-pill cyan">Python</span><span class="meta-pill blue">Tkinter GUI</span>
+      <span class="meta-pill green">Matplotlib</span><span class="meta-pill purple">Analytics Tool</span>
+    </div>
+  </div>
+</div>
+
+<div class="proj-content">
+  <div class="two-col">
+    <div class="prose reveal">
+      <h2>Project Overview</h2>
+      <p>A <em>Python desktop application</em> for enterprise internet usage monitoring — tracking which departments consume the most bandwidth, identifying peak usage hours, flagging non-productive browsing, and generating executive summary reports.</p>
+      <p>The tool reads usage logs, processes them with Pandas, and renders <em>interactive visualisation charts</em> via Matplotlib — all within a clean Tkinter GUI.</p>
+
+      <h2>Core Analytics Modules</h2>
+      <ul>
+        <li><em>Department Usage Analysis</em> — bandwidth consumption by department and team</li>
+        <li><em>Peak Hours Detection</em> — hourly usage patterns to identify bottlenecks</li>
+        <li><em>Daily Usage Trends</em> — daily and weekly usage trend lines</li>
+        <li><em>Top 10 Sites</em> — most visited domains ranked by time and data usage</li>
+        <li><em>Category Breakdown</em> — productive vs non-productive category classification</li>
+        <li><em>Productivity Scoring</em> — department-level productivity score calculation</li>
+        <li><em>Executive Dashboard</em> — full summary report exportable as PNG/CSV</li>
+      </ul>
+
+      <h2>Technical Implementation</h2>
+      <ul>
+        <li>Custom Tkinter GUI with tabbed navigation for each analytics view</li>
+        <li>Pandas for data ingestion, cleaning, and aggregation pipelines</li>
+        <li>Matplotlib embedded within Tkinter for live chart rendering</li>
+        <li>CSV export for all aggregated reports — compatible with Excel/BI tools</li>
+        <li>Logging system for audit trail — saves daily analytics logs</li>
+        <li>Configurable thresholds for productivity classification</li>
+      </ul>
+
+      <h2>Use Case & Impact</h2>
+      <p>Gives IT and management <em>complete visibility into internet consumption</em> without expensive enterprise tools. The productivity score helps identify departments with high non-productive browsing — enabling focused policy interventions.</p>
+    </div>
+    <div class="sidebar reveal reveal-delay-1">
+      <div class="info-card">
+        <h4>Project Info</h4>
+        <div class="info-row"><span class="info-key">Type</span><span class="info-val">Desktop Analytics Tool</span></div>
+        <div class="info-row"><span class="info-key">Interface</span><span class="info-val">Tkinter GUI</span></div>
+        <div class="info-row"><span class="info-key">Year</span><span class="info-val">2026</span></div>
+        <div class="info-row"><span class="info-key">Exports</span><span class="info-val">PNG + CSV reports</span></div>
+      </div>
+      <div class="info-card">
+        <h4>Tech Stack</h4>
+        <div class="tech-tags">
+          <span class="tech-tag">Python</span><span class="tech-tag">Tkinter</span><span class="tech-tag">Pandas</span>
+          <span class="tech-tag">Matplotlib</span><span class="tech-tag">CSV</span><span class="tech-tag">Logging</span>
+        </div>
+      </div>
+      <div class="impact-box">
+        <h4>Key Results</h4>
+        <div class="impact-row"><div><div class="impact-val">7</div><div class="impact-label">Analytics views built</div></div></div>
+        <div class="impact-row"><div><div class="impact-val">CSV</div><div class="impact-label">Automated report exports</div></div></div>
+        <div class="impact-row"><div><div class="impact-val">Live</div><div class="impact-label">Real-time chart rendering</div></div></div>
+      </div>
+      <a href="https://github.com/Umangmojidra" target="_blank" class="gh-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>View on GitHub</a>
+    </div>
+  </div>
+  <div class="screenshots-section reveal">
+    <h2>Application Screenshots</h2>
+    <div class="screenshots-grid">
+      <div class="screenshot-thumb wide" onclick="openLb(this)"><img src="../images/internet/category_breakdown.png" alt="Category"><div class="ss-caption">Category Breakdown — productive vs non-productive</div></div>
+      <div class="screenshot-thumb" onclick="openLb(this)"><img src="../images/internet/department_usage.png" alt="Department Usage"><div class="ss-caption">Department Internet Usage — bandwidth by team</div></div>
+      <div class="screenshot-thumb" onclick="openLb(this)"><img src="../images/internet/daily_trend.png" alt="Daily Trend"><div class="ss-caption">Daily Usage Trend — time series analysis</div></div>
+      <div class="screenshot-thumb" onclick="openLb(this)"><img src="../images/internet/peak_hours.png" alt="Peak Hours"><div class="ss-caption">Peak Hours Detection — usage heatmap</div></div>
+      <div class="screenshot-thumb" onclick="openLb(this)"><img src="../images/internet/top10.png" alt="Top Sites"><div class="ss-caption">Top 10 Most Visited Sites</div></div>
+      <div class="screenshot-thumb" onclick="openLb(this)"><img src="../images/internet/dept_productivity.png" alt="Productivity"><div class="ss-caption">Department Productivity Scores</div></div>
+    </div>
+  </div>
+</div>
+<div id="lightbox" onclick="closeLb()"><button id="lb-close" onclick="closeLb()">✕</button><img id="lb-img" src="" alt=""></div>
+<footer class="site-footer"><p>Designed & built by <strong>Umang Mojidra</strong> · <a href="../index.html">Back to Portfolio</a></p></footer>
+<script src="../js/shared.js"></script>
+<script>function openLb(el){const img=el.querySelector('img');document.getElementById('lb-img').src=img.src;document.getElementById('lightbox').classList.add('open');}function closeLb(){document.getElementById('lightbox').classList.remove('open');}document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb();});</script>
+</body></html>

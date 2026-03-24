@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>StyleHub — Umang Mojidra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<style>
+.proj-hero { min-height:52vh;display:flex;align-items:flex-end;padding:160px 24px 60px;position:relative;overflow:hidden;background:linear-gradient(160deg,#0a0015,#140030,#050810); }
+.proj-hero-bg { position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(124,58,237,.25),transparent 60%); }
+.proj-hero-inner { position:relative;z-index:1;max-width:1100px;margin:0 auto;width:100%; }
+.back-link { display:inline-flex;align-items:center;gap:7px;color:var(--muted);font-size:.82rem;text-decoration:none;margin-bottom:28px;transition:color .2s; }
+.back-link:hover { color:var(--text); }
+.proj-hero-tag { font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:#a78bfa;font-weight:600;margin-bottom:10px; }
+.proj-hero-title { font-family:var(--font-head);font-size:clamp(2.2rem,5vw,4rem);font-weight:800;letter-spacing:-.025em;line-height:1.1;margin-bottom:16px; }
+.proj-hero-sub { color:var(--muted);font-size:1.05rem;line-height:1.7;max-width:600px;font-weight:300;margin-bottom:32px; }
+.proj-meta-row { display:flex;flex-wrap:wrap;gap:12px;align-items:center; }
+.meta-pill { padding:5px 14px;border-radius:100px;font-size:.75rem;font-weight:500; }
+.meta-pill.purple { background:rgba(124,58,237,.15);border:1px solid rgba(124,58,237,.3);color:#a78bfa; }
+.meta-pill.cyan   { background:rgba(6,182,212,.12);border:1px solid rgba(6,182,212,.25);color:var(--accent2); }
+.meta-pill.green  { background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.25);color:#6ee7b7; }
+.meta-pill.amber  { background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.25);color:#fcd34d; }
+
+.proj-content { max-width:1100px;margin:0 auto;padding:72px 24px; }
+.two-col { display:grid;grid-template-columns:1.6fr 1fr;gap:56px;align-items:start; }
+.prose h2 { font-family:var(--font-head);font-size:1.5rem;font-weight:700;letter-spacing:-.01em;margin:36px 0 14px;color:var(--text); }
+.prose h2:first-child { margin-top:0; }
+.prose p { color:var(--muted);line-height:1.78;font-size:.95rem;margin-bottom:16px;font-weight:300; }
+.prose p em { font-style:normal;color:var(--text);font-weight:400; }
+.prose ul { list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:16px; }
+.prose ul li { display:flex;align-items:flex-start;gap:10px;color:var(--muted);font-size:.9rem;font-weight:300;line-height:1.6; }
+.prose ul li::before { content:'→';color:var(--accent2);font-weight:600;flex-shrink:0;margin-top:1px; }
+
+.sidebar { display:flex;flex-direction:column;gap:20px; }
+.info-card { background:var(--glass);border:1px solid var(--border);border-radius:var(--radius);padding:22px; }
+.info-card h4 { font-family:var(--font-head);font-size:.9rem;font-weight:700;margin-bottom:14px;color:var(--accent2);text-transform:uppercase;letter-spacing:.06em; }
+.info-row { display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--border); }
+.info-row:last-child { border-bottom:none; }
+.info-key { font-size:.78rem;color:var(--muted); }
+.info-val { font-size:.8rem;font-weight:500;color:var(--text); }
+.tech-tags { display:flex;flex-wrap:wrap;gap:7px;margin-top:8px; }
+.tech-tag { padding:4px 12px;background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:100px;font-size:.72rem;color:var(--muted); }
+
+.impact-box { background:rgba(16,185,129,.06);border:1px solid rgba(16,185,129,.18);border-radius:var(--radius);padding:20px; }
+.impact-box h4 { font-family:var(--font-head);font-size:.85rem;font-weight:700;color:#10b981;margin-bottom:12px;text-transform:uppercase;letter-spacing:.06em; }
+.impact-row { display:flex;align-items:center;gap:10px;margin-bottom:8px; }
+.impact-row:last-child { margin-bottom:0; }
+.impact-val { font-family:var(--font-head);font-size:1.5rem;font-weight:800;color:#6ee7b7; }
+.impact-label { font-size:.78rem;color:var(--muted); }
+
+.gh-btn { display:inline-flex;align-items:center;gap:9px;padding:12px 22px;background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:10px;color:var(--text);text-decoration:none;font-size:.85rem;font-weight:500;transition:all .2s;width:100%;justify-content:center; }
+.gh-btn:hover { background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2); }
+
+/* Screenshots */
+.screenshots-section { margin-top:72px; }
+.screenshots-section h2 { font-family:var(--font-head);font-size:1.6rem;font-weight:800;margin-bottom:32px;letter-spacing:-.02em; }
+.screenshots-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:16px; }
+.screenshot-thumb {
+  border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);
+  cursor:pointer;transition:transform .25s,border-color .25s,box-shadow .25s;
+  background:var(--surface); aspect-ratio:16/10;
+}
+.screenshot-thumb:hover { transform:scale(1.03);border-color:rgba(124,58,237,.4);box-shadow:0 12px 36px rgba(124,58,237,.2); }
+.screenshot-thumb img { width:100%;height:100%;object-fit:cover;display:block; }
+.screenshot-thumb.wide { grid-column:span 2; }
+.ss-caption { font-size:.72rem;color:var(--muted);text-align:center;margin-top:7px; }
+
+/* Lightbox */
+#lightbox { position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9990;display:none;align-items:center;justify-content:center;backdrop-filter:blur(8px); }
+#lightbox.open { display:flex; }
+#lb-img { max-width:90vw;max-height:85vh;border-radius:12px;box-shadow:0 0 80px rgba(0,0,0,.8); }
+#lb-close { position:absolute;top:24px;right:28px;background:transparent;border:none;color:var(--muted);font-size:1.8rem;cursor:pointer;transition:color .2s; }
+#lb-close:hover { color:var(--text); }
+
+@media(max-width:900px){
+  .two-col { grid-template-columns:1fr; }
+  .screenshots-grid { grid-template-columns:1fr 1fr; }
+  .screenshot-thumb.wide { grid-column:span 1; }
+}
+@media(max-width:600px){
+  .screenshots-grid { grid-template-columns:1fr; }
+}
+</style>
+</head>
+<body>
+<div id="cursor-dot"></div><div id="cursor-ring"></div><div id="scroll-bar"></div>
+
+<nav id="navbar">
+  <a href="../index.html" class="nav-logo">UM.</a>
+  <ul class="nav-links">
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#skills">Skills</a></li>
+    <li><a href="../index.html#projects" class="active">Projects</a></li>
+    <li><a href="../index.html#experience">Journey</a></li>
+  </ul>
+  <a href="../index.html#contact" class="nav-cta">Let's Talk →</a>
+</nav>
+
+<div class="proj-hero">
+  <div class="proj-hero-bg"></div>
+  <div class="proj-hero-inner">
+    <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+    <div class="proj-hero-tag">Full-Stack Web Application · E-Commerce</div>
+    <h1 class="proj-hero-title">StyleHub<br><span style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">E-Commerce Platform</span></h1>
+    <p class="proj-hero-sub">A production-grade, full-stack e-commerce platform with secure authentication, real payment gateway integration, and a feature-rich admin dashboard — built entirely with Python & Flask.</p>
+    <div class="proj-meta-row">
+      <span class="meta-pill purple">Python · Flask</span>
+      <span class="meta-pill cyan">MySQL</span>
+      <span class="meta-pill green">Razorpay</span>
+      <span class="meta-pill amber">JWT Auth</span>
+      <span class="meta-pill purple">Full Stack</span>
+    </div>
+  </div>
+</div>
+
+<div class="proj-content">
+  <div class="two-col">
+    <div class="prose reveal">
+      <h2>Project Overview</h2>
+      <p>StyleHub is a <em>complete, production-grade retail e-commerce platform</em> designed to handle real-world shopping workflows — from OTP-verified registration all the way to Razorpay payment checkout and admin-level inventory management.</p>
+      <p>Built with a <em>clean Blueprint-based Flask architecture</em>, StyleHub demonstrates end-to-end full-stack web development — secure authentication, payment processing, database design, and admin operations — all in Python.</p>
+
+      <h2>Problem Statement</h2>
+      <p>Building a real e-commerce platform is one of the hardest engineering challenges for a student developer. It requires mastering: auth systems, database design, payment security, session management, and UI — all simultaneously.</p>
+      <p>The goal was to build something a real startup could deploy — not a tutorial project.</p>
+
+      <h2>Technical Architecture</h2>
+      <p>The application follows a <em>modular Blueprint architecture</em> — each domain (auth, products, cart, orders, payments, admin) is isolated in its own route file, making it maintainable and scalable.</p>
+      <ul>
+        <li><em>JWT Authentication</em> with HS256 tokens, 24hr expiry, and server-side session storage</li>
+        <li><em>Razorpay Integration</em> — HMAC-SHA256 signature verification on every payment</li>
+        <li><em>OTP Verification</em> on registration — 6-digit code system</li>
+        <li><em>Role-based Access</em> — @login_required and @admin_required decorators</li>
+        <li><em>MySQL with auto-ID triggers</em> — USR00001, PROD0001, ORD00001 format</li>
+        <li><em>Bcrypt password hashing</em> via Flask-Bcrypt</li>
+      </ul>
+
+      <h2>Key Features</h2>
+      <ul>
+        <li>Full product catalog with search, category filter, and sort</li>
+        <li>Live cart with real-time subtotal and shipping recalculation</li>
+        <li>COD + Razorpay payment options</li>
+        <li>Order history and detailed order tracking</li>
+        <li>Admin dashboard — KPI cards, sales analytics, top products</li>
+        <li>Low stock alerts (products with stock &lt; 5 flagged automatically)</li>
+        <li>User management — view, block/unblock accounts</li>
+        <li>Payment transaction logs</li>
+      </ul>
+
+      <h2>Outcome & Learning</h2>
+      <p>This project proved that a <em>student developer can build production-level systems</em>. StyleHub demonstrates mastery of the entire web development stack — backend, database, security, and payments — using Python alone.</p>
+    </div>
+    <div class="sidebar reveal reveal-delay-1">
+      <div class="info-card">
+        <h4>Project Info</h4>
+        <div class="info-row"><span class="info-key">Type</span><span class="info-val">Full-Stack Web App</span></div>
+        <div class="info-row"><span class="info-key">Year</span><span class="info-val">2024</span></div>
+        <div class="info-row"><span class="info-key">Status</span><span class="info-val">✅ Production-Grade</span></div>
+        <div class="info-row"><span class="info-key">DB Tables</span><span class="info-val">8 core tables</span></div>
+        <div class="info-row"><span class="info-key">Auth</span><span class="info-val">JWT + OTP</span></div>
+        <div class="info-row"><span class="info-key">Payments</span><span class="info-val">Razorpay</span></div>
+      </div>
+      <div class="info-card">
+        <h4>Tech Stack</h4>
+        <div class="tech-tags">
+          <span class="tech-tag">Python 3.12</span><span class="tech-tag">Flask 3.0</span>
+          <span class="tech-tag">MySQL 8.0</span><span class="tech-tag">PyMySQL</span>
+          <span class="tech-tag">PyJWT</span><span class="tech-tag">Flask-Bcrypt</span>
+          <span class="tech-tag">Razorpay SDK</span><span class="tech-tag">Jinja2</span>
+          <span class="tech-tag">HTML/CSS/JS</span><span class="tech-tag">python-dotenv</span>
+        </div>
+      </div>
+      <div class="impact-box">
+        <h4>Key Achievements</h4>
+        <div class="impact-row"><div><div class="impact-val">8+</div><div class="impact-label">API Route Modules</div></div></div>
+        <div class="impact-row"><div><div class="impact-val">6</div><div class="impact-label">Blueprint Domains</div></div></div>
+        <div class="impact-row"><div><div class="impact-val">HMAC</div><div class="impact-label">Payment Security</div></div></div>
+      </div>
+      <a href="https://github.com/Umangmojidra/StyleHub-" target="_blank" class="gh-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        View on GitHub
+      </a>
+    </div>
+  </div>
+
+  <!-- SCREENSHOTS -->
+  <div class="screenshots-section reveal">
+    <h2>Project Screenshots</h2>
+    <div class="screenshots-grid">
+      <div class="screenshot-thumb wide" onclick="openLb(this)">
+        <img src="../images/stylehub/stylehub_admin_dashboard.png" alt="Admin Dashboard">
+        <div class="ss-caption">Admin Dashboard — KPIs, sales analytics, order management</div>
+      </div>
+      <div class="screenshot-thumb" onclick="openLb(this)">
+        <img src="../images/stylehub/stylehub_homepage.png" alt="Homepage">
+        <div class="ss-caption">Homepage — Product listing with search & filter</div>
+      </div>
+      <div class="screenshot-thumb" onclick="openLb(this)">
+        <img src="../images/stylehub/stylehub_login.png" alt="Login">
+        <div class="ss-caption">Secure Login with JWT Authentication</div>
+      </div>
+      <div class="screenshot-thumb" onclick="openLb(this)">
+        <img src="../images/stylehub/stylehub_products.png" alt="Products">
+        <div class="ss-caption">Product Catalog — Category filter & sort</div>
+      </div>
+      <div class="screenshot-thumb" onclick="openLb(this)">
+        <img src="../images/stylehub/stylehub_checkout.png" alt="Checkout">
+        <div class="ss-caption">Checkout — Address selection & order summary</div>
+      </div>
+      <div class="screenshot-thumb" onclick="openLb(this)">
+        <img src="../images/stylehub/stylehub_payments.png" alt="Payments">
+        <div class="ss-caption">Razorpay Payment Integration with HMAC verification</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="lightbox" onclick="closeLb()">
+  <button id="lb-close" onclick="closeLb()">✕</button>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<footer class="site-footer"><p>Designed & built by <strong>Umang Mojidra</strong> · <a href="../index.html">Back to Portfolio</a></p></footer>
+<script src="../js/shared.js"></script>
+<script>
+function openLb(el){ const img=el.querySelector('img'); document.getElementById('lb-img').src=img.src; document.getElementById('lightbox').classList.add('open'); }
+function closeLb(){ document.getElementById('lightbox').classList.remove('open'); }
+document.addEventListener('keydown',e=>{ if(e.key==='Escape')closeLb(); });
+</script>
+</body>
+</html>

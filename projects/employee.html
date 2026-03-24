@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Employee Management System — Umang Mojidra</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css"><link rel="stylesheet" href="project-layout.css">
+</head>
+<body>
+<div id="cursor-dot"></div><div id="cursor-ring"></div><div id="scroll-bar"></div>
+<nav id="navbar"><a href="../index.html" class="nav-logo">UM.</a><ul class="nav-links"><li><a href="../index.html#about">About</a></li><li><a href="../index.html#skills">Skills</a></li><li><a href="../index.html#projects" class="active">Projects</a></li><li><a href="../index.html#experience">Journey</a></li></ul><a href="../index.html#contact" class="nav-cta">Let's Talk →</a></nav>
+
+<div class="proj-hero" style="background:linear-gradient(160deg,#001a10,#002a1a,#050810);">
+  <div class="proj-hero-bg" style="background:radial-gradient(ellipse at 25% 50%,rgba(16,185,129,.22),transparent 60%)"></div>
+  <div class="proj-hero-inner">
+    <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+    <div class="proj-hero-tag">Full-Stack Web Application · HR & Payroll</div>
+    <h1 class="proj-hero-title">Employee Management<br><span style="background:linear-gradient(135deg,#06b6d4,#10b981);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">& Payroll System</span></h1>
+    <p class="proj-hero-sub">A complete HR management platform with multi-role access, attendance tracking, automated payroll processing, and an integrated Power BI analytics dashboard — built with Flask and MySQL.</p>
+    <div class="proj-meta-row">
+      <span class="meta-pill green">Python · Flask</span><span class="meta-pill cyan">MySQL</span>
+      <span class="meta-pill blue">Power BI</span><span class="meta-pill purple">Full Stack</span><span class="meta-pill amber">HR System</span>
+    </div>
+  </div>
+</div>
+
+<div class="proj-content">
+  <div class="two-col">
+    <div class="prose reveal">
+      <h2>Project Overview</h2>
+      <p>A <em>production-ready HR & Payroll Management System</em> (PMMS) that automates the full employee lifecycle — from onboarding and attendance tracking to payroll processing and analytics reporting.</p>
+      <p>The system features <em>role-based access control</em> — admins manage the entire system while employees access their own dashboards for payslips, attendance, and profile management.</p>
+
+      <h2>Problem Statement</h2>
+      <p>Manual HR processes are time-consuming, error-prone, and hard to audit. Companies waste hours on payroll calculations, attendance records, and report generation. This system eliminates all of that.</p>
+
+      <h2>Key Features</h2>
+      <ul>
+        <li><em>Employee Dashboard</em> — attendance history, payslip access, profile management</li>
+        <li><em>Admin Dashboard</em> — manage all employees, departments, attendance, and payroll</li>
+        <li><em>Automated Payroll</em> — calculate salary, deductions, and generate payslips</li>
+        <li><em>Attendance Tracking</em> — mark, view, and export attendance records</li>
+        <li><em>Analytics Module</em> — integrated Power BI dashboard for workforce insights</li>
+        <li><em>Payment Slip Generation</em> — downloadable payslip HTML templates</li>
+        <li><em>Role-Based Auth</em> — admin vs employee access separation</li>
+      </ul>
+
+      <h2>Technical Highlights</h2>
+      <p>Built on <em>Flask with a clean template architecture</em> and MySQL backend. The db.py module provides a clean database abstraction layer. Power BI integration gives management real-time workforce analytics without writing SQL manually.</p>
+      <ul>
+        <li>Modular route structure — admin routes separated from employee routes</li>
+        <li>MySQL stored procedures for payroll calculations</li>
+        <li>Responsive HTML/CSS with custom JS for dynamic UI updates</li>
+        <li>Power BI .pbix file for executive-level workforce reporting</li>
+      </ul>
+
+      <h2>Business Impact</h2>
+      <p>Automates payroll processing that would otherwise take HR teams days per month. The analytics dashboard turns raw attendance data into <em>actionable workforce insights</em> — absenteeism trends, department productivity, and salary distribution.</p>
+    </div>
+    <div class="sidebar reveal reveal-delay-1">
+      <div class="info-card">
+        <h4>Project Info</h4>
+        <div class="info-row"><span class="info-key">Domain</span><span class="info-val">HR & Enterprise</span></div>
+        <div class="info-row"><span class="info-key">Year</span><span class="info-val">2026</span></div>
+        <div class="info-row"><span class="info-key">Type</span><span class="info-val">Full-Stack Web App</span></div>
+        <div class="info-row"><span class="info-key">BI Tool</span><span class="info-val">Power BI</span></div>
+        <div class="info-row"><span class="info-key">Auth</span><span class="info-val">Role-based</span></div>
+      </div>
+      <div class="info-card">
+        <h4>Tech Stack</h4>
+        <div class="tech-tags">
+          <span class="tech-tag">Python</span><span class="tech-tag">Flask</span><span class="tech-tag">MySQL</span>
+          <span class="tech-tag">HTML/CSS/JS</span><span class="tech-tag">Jinja2</span>
+          <span class="tech-tag">Power BI</span><span class="tech-tag">Pandas</span>
+        </div>
+      </div>
+      <div class="impact-box">
+        <h4>Key Achievements</h4>
+        <div class="impact-row"><div><div class="impact-val">2</div><div class="impact-label">Role types (Admin/Employee)</div></div></div>
+        <div class="impact-row"><div><div class="impact-val">Auto</div><div class="impact-label">Payroll calculation</div></div></div>
+        <div class="impact-row"><div><div class="impact-val">BI</div><div class="impact-label">Power BI analytics integrated</div></div></div>
+      </div>
+      <a href="https://github.com/Umangmojidra" target="_blank" class="gh-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>View on GitHub</a>
+    </div>
+  </div>
+  <div class="screenshots-section reveal">
+    <h2>System Screenshots</h2>
+    <div class="screenshots-grid">
+      <div class="screenshot-thumb wide" onclick="openLb(this)"><img src="../images/employee/admin.png" alt="Admin Dashboard"><div class="ss-caption">Admin Dashboard — full employee & payroll oversight</div></div>
+      <div class="screenshot-thumb" onclick="openLb(this)"><img src="../images/employee/login.png" alt="Login"><div class="ss-caption">Secure Login — role-based authentication</div></div>
+      <div class="screenshot-thumb" onclick="openLb(this)"><img src="../images/employee/employee.png" alt="Employee View"><div class="ss-caption">Employee Dashboard — attendance & payslips</div></div>
+      <div class="screenshot-thumb" onclick="openLb(this)"><img src="../images/employee/payroll.png" alt="Payroll"><div class="ss-caption">Payroll Processing — automated salary computation</div></div>
+      <div class="screenshot-thumb wide" onclick="openLb(this)"><img src="../images/employee/analytics.png" alt="Analytics"><div class="ss-caption">Analytics Module — workforce insights & trends</div></div>
+    </div>
+  </div>
+</div>
+<div id="lightbox" onclick="closeLb()"><button id="lb-close" onclick="closeLb()">✕</button><img id="lb-img" src="" alt=""></div>
+<footer class="site-footer"><p>Designed & built by <strong>Umang Mojidra</strong> · <a href="../index.html">Back to Portfolio</a></p></footer>
+<script src="../js/shared.js"></script>
+<script>function openLb(el){const img=el.querySelector('img');document.getElementById('lb-img').src=img.src;document.getElementById('lightbox').classList.add('open');}function closeLb(){document.getElementById('lightbox').classList.remove('open');}document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb();});</script>
+</body>
+</html>

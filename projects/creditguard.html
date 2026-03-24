@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CreditGuard — Umang Mojidra</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css">
+<link rel="stylesheet" href="project-layout.css">
+<link rel="stylesheet" href="project-layout.css">
+</head>
+<body>
+<div id="cursor-dot"></div><div id="cursor-ring"></div><div id="scroll-bar"></div>
+<nav id="navbar">
+  <a href="../index.html" class="nav-logo">UM.</a>
+  <ul class="nav-links"><li><a href="../index.html#about">About</a></li><li><a href="../index.html#skills">Skills</a></li><li><a href="../index.html#projects" class="active">Projects</a></li><li><a href="../index.html#experience">Journey</a></li></ul>
+  <a href="../index.html#contact" class="nav-cta">Let's Talk →</a>
+</nav>
+
+<div class="proj-hero" style="background:linear-gradient(160deg,#0d0320,#1a0533,#050810);">
+  <div class="proj-hero-bg" style="background:radial-gradient(ellipse at 25% 50%,rgba(124,58,237,.28),transparent 60%)"></div>
+  <div class="proj-hero-inner">
+    <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+    <div class="proj-hero-tag">Data Analysis · Machine Learning · Risk Intelligence</div>
+    <h1 class="proj-hero-title">CreditGuard<br><span class="grad-text">Retail Lending Risk Intelligence</span></h1>
+    <p class="proj-hero-sub">End-to-end credit risk analysis on 1500+ retail loan records — identifying NPA drivers, segmenting borrowers by default risk, and surfacing actionable insights for credit teams.</p>
+    <div class="proj-meta-row">
+      <span class="meta-pill purple">Python</span><span class="meta-pill cyan">Pandas · NumPy</span>
+      <span class="meta-pill green">Scikit-Learn</span><span class="meta-pill amber">SQL</span><span class="meta-pill purple">Data Analysis</span>
+    </div>
+  </div>
+</div>
+
+<div class="proj-content">
+  <div class="two-col">
+    <div class="prose reveal">
+      <h2>Business Problem</h2>
+      <p><em>GM Bank</em> is a mid-sized retail bank facing a surge in loan defaults and NPAs (Non-Performing Assets). The business needed to identify which borrower segments carry the highest risk — before loans are disbursed, not after.</p>
+      <p>Manual review processes were slow, inconsistent, and missed early warning patterns hidden in the data.</p>
+
+      <h2>My Approach</h2>
+      <p>I built a <em>full analytical pipeline from raw data to business insights</em> — covering data quality validation, exploratory analysis, feature engineering, risk segmentation, and visual reporting.</p>
+      <ul>
+        <li><em>Data Quality Pass</em> — validated 1500+ records for missing values, outliers (IQR method), and duplicates</li>
+        <li><em>Loan Default Assessment</em> — overall portfolio health and default rate breakdown</li>
+        <li><em>Customer Risk Profiling</em> — segmentation by credit score, employment type, and income band</li>
+        <li><em>Repayment Behavior Analysis</em> — EMI delay distributions as leading default indicators</li>
+        <li><em>Regional Risk Evaluation</em> — NPA mapping by geographic region</li>
+        <li><em>Feature Engineering</em> — created risk-scoring features for downstream ML models</li>
+      </ul>
+
+      <h2>Key Findings</h2>
+      <ul>
+        <li>Personal loans and credit cards show the <em>highest default risk</em> across all loan types</li>
+        <li>Low credit score customers (&lt;580) account for the <em>majority of NPAs</em></li>
+        <li>EMI delays beyond 30 days are a <em>strong early indicator</em> of eventual default</li>
+        <li>Certain geographic regions have <em>3x higher NPA concentration</em> than the national average</li>
+        <li>Self-employed borrowers show <em>significantly higher delinquency rates</em> than salaried employees</li>
+      </ul>
+
+      <h2>SQL Analysis</h2>
+      <p>Parallel SQL queries were written on the cleaned dataset for quick business intelligence — aggregations by loan type, region, employment category, and risk tier. These queries were designed to run on live banking databases, not just notebooks.</p>
+
+      <h2>Impact</h2>
+      <p>The framework identifies <em>high-risk borrower segments with 87% precision</em>, enabling credit teams to apply enhanced due diligence before disbursement — and reducing NPA formation proactively.</p>
+    </div>
+    <div class="sidebar reveal reveal-delay-1">
+      <div class="info-card">
+        <h4>Project Info</h4>
+        <div class="info-row"><span class="info-key">Domain</span><span class="info-val">Credit Risk / FinTech</span></div>
+        <div class="info-row"><span class="info-key">Dataset</span><span class="info-val">1500+ loan records</span></div>
+        <div class="info-row"><span class="info-key">Year</span><span class="info-val">2026</span></div>
+        <div class="info-row"><span class="info-key">Type</span><span class="info-val">EDA + Risk Modelling</span></div>
+      </div>
+      <div class="info-card">
+        <h4>Tech Stack</h4>
+        <div class="tech-tags">
+          <span class="tech-tag">Python</span><span class="tech-tag">Pandas</span><span class="tech-tag">NumPy</span>
+          <span class="tech-tag">Matplotlib</span><span class="tech-tag">Seaborn</span><span class="tech-tag">Scikit-Learn</span>
+          <span class="tech-tag">SQL</span><span class="tech-tag">Jupyter</span>
+        </div>
+      </div>
+      <div class="impact-box">
+        <h4>Key Results</h4>
+        <div class="impact-row"><div><div class="impact-val">87%</div><div class="impact-label">Risk detection precision</div></div></div>
+        <div class="impact-row"><div><div class="impact-val">1500+</div><div class="impact-label">Loan records analysed</div></div></div>
+        <div class="impact-row"><div><div class="impact-val">5</div><div class="impact-label">Risk dimensions mapped</div></div></div>
+      </div>
+      <a href="https://github.com/Umangmojidra" target="_blank" class="gh-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        View on GitHub
+      </a>
+    </div>
+  </div>
+
+  <div class="screenshots-section reveal">
+    <h2>Analysis Visuals</h2>
+    <div class="screenshots-grid">
+      <div class="screenshot-thumb wide" onclick="openLb(this)">
+        <img src="../images/creditguard/credit_score_default.png" alt="Credit Score vs Default">
+        <div class="ss-caption">Credit Score vs Default Rate — risk concentration in low-score bands</div>
+      </div>
+      <div class="screenshot-thumb" onclick="openLb(this)">
+        <img src="../images/creditguard/emi_delay_distribution.png" alt="EMI Delay Distribution">
+        <div class="ss-caption">EMI Delay Distribution — leading indicator of default risk</div>
+      </div>
+      <div class="screenshot-thumb" onclick="openLb(this)">
+        <img src="../images/creditguard/loan_type_default.png" alt="Loan Type Default">
+        <div class="ss-caption">Default Rate by Loan Type — personal loans & credit cards highest risk</div>
+      </div>
+      <div class="screenshot-thumb" onclick="openLb(this)">
+        <img src="../images/creditguard/region_default.png" alt="Regional NPA">
+        <div class="ss-caption">Regional NPA Mapping — geographic risk concentration</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="lightbox" onclick="closeLb()"><button id="lb-close" onclick="closeLb()">✕</button><img id="lb-img" src="" alt=""></div>
+<footer class="site-footer"><p>Designed & built by <strong>Umang Mojidra</strong> · <a href="../index.html">Back to Portfolio</a></p></footer>
+<script src="../js/shared.js"></script>
+<script>function openLb(el){const img=el.querySelector('img');document.getElementById('lb-img').src=img.src;document.getElementById('lightbox').classList.add('open');}function closeLb(){document.getElementById('lightbox').classList.remove('open');}document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb();});</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Bank Management System — Umang Mojidra</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/shared.css"><link rel="stylesheet" href="project-layout.css">
+</head><body>
+<div id="cursor-dot"></div><div id="cursor-ring"></div><div id="scroll-bar"></div>
+<nav id="navbar"><a href="../index.html" class="nav-logo">UM.</a><ul class="nav-links"><li><a href="../index.html#about">About</a></li><li><a href="../index.html#skills">Skills</a></li><li><a href="../index.html#projects" class="active">Projects</a></li><li><a href="../index.html#experience">Journey</a></li></ul><a href="../index.html#contact" class="nav-cta">Let's Talk →</a></nav>
+
+<div class="proj-hero" style="background:linear-gradient(160deg,#001020,#002040,#050810);">
+  <div class="proj-hero-bg" style="background:radial-gradient(ellipse at 25% 50%,rgba(59,130,246,.22),transparent 60%)"></div>
+  <div class="proj-hero-inner">
+    <a href="../index.html#projects" class="back-link">← Back to Projects</a>
+    <div class="proj-hero-tag">SQL · Python · Banking System</div>
+    <h1 class="proj-hero-title">Bank Management<br><span style="background:linear-gradient(135deg,#3b82f6,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">System (BMS)</span></h1>
+    <p class="proj-hero-sub">A SQL-backed banking system simulating core banking operations — account management, loan tracking, branch analytics, transaction reporting, and customer intelligence via Python CLI.</p>
+    <div class="proj-meta-row">
+      <span class="meta-pill blue">Python</span><span class="meta-pill cyan">SQL · MySQL</span>
+      <span class="meta-pill green">CSV Analytics</span><span class="meta-pill purple">Banking Domain</span>
+    </div>
+  </div>
+</div>
+
+<div class="proj-content">
+  <div class="two-col">
+    <div class="prose reveal">
+      <h2>Project Overview</h2>
+      <p>A <em>complete banking management system</em> that simulates core banking operations — account management, loan portfolio tracking, branch-level analytics, and transaction history reporting — built with Python and MySQL.</p>
+      <p>The system demonstrates <em>advanced SQL query design</em> alongside Python for data processing and CSV-based report generation.</p>
+
+      <h2>Core Banking Modules</h2>
+      <ul>
+        <li><em>Account Management</em> — create, update, query customer accounts by type</li>
+        <li><em>Loan Portfolio</em> — track loans by type, interest, and distribution</li>
+        <li><em>Transaction Processing</em> — monthly transaction aggregation and reporting</li>
+        <li><em>Branch Analytics</em> — deposit totals and performance by branch</li>
+        <li><em>Customer Intelligence</em> — top customers ranked by account balance</li>
+      </ul>
+
+      <h2>SQL Query Design</h2>
+      <p>The project showcases <em>production-level SQL</em> — complex joins, aggregations, CTEs, and window functions for business reporting. All query outputs are exported as structured CSV files for downstream analysis.</p>
+      <ul>
+        <li>Average balance per account type — customer segmentation queries</li>
+        <li>Branch-wise deposit totals — geographic performance analysis</li>
+        <li>Interest collected per loan type — revenue analytics</li>
+        <li>Loan distribution by type — portfolio risk assessment</li>
+        <li>Monthly transaction volume — trend analysis and reconciliation</li>
+        <li>Top customers by balance — high-value customer identification</li>
+      </ul>
+
+      <h2>Python Integration</h2>
+      <p>Python connects to MySQL, executes the query suite, processes results with Pandas, and exports clean CSV reports — creating a <em>complete data pipeline from database to business report</em>.</p>
+    </div>
+    <div class="sidebar reveal reveal-delay-1">
+      <div class="info-card">
+        <h4>Project Info</h4>
+        <div class="info-row"><span class="info-key">Domain</span><span class="info-val">Banking / Finance</span></div>
+        <div class="info-row"><span class="info-key">Type</span><span class="info-val">SQL + Python CLI</span></div>
+        <div class="info-row"><span class="info-key">Year</span><span class="info-val">2025</span></div>
+        <div class="info-row"><span class="info-key">Outputs</span><span class="info-val">6 CSV report files</span></div>
+      </div>
+      <div class="info-card">
+        <h4>Tech Stack</h4>
+        <div class="tech-tags">
+          <span class="tech-tag">Python</span><span class="tech-tag">MySQL</span><span class="tech-tag">SQL</span>
+          <span class="tech-tag">Pandas</span><span class="tech-tag">PyMySQL</span><span class="tech-tag">CSV</span>
+        </div>
+      </div>
+      <div class="impact-box">
+        <h4>Key Results</h4>
+        <div class="impact-row"><div><div class="impact-val">6</div><div class="impact-label">Business SQL reports</div></div></div>
+        <div class="impact-row"><div><div class="impact-val">Full</div><div class="impact-label">Banking schema designed</div></div></div>
+        <div class="impact-row"><div><div class="impact-val">CSV</div><div class="impact-label">Automated report pipeline</div></div></div>
+      </div>
+      <a href="https://github.com/Umangmojidra" target="_blank" class="gh-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>View on GitHub</a>
+    </div>
+  </div>
+  <div class="screenshots-section reveal">
+    <h2>Banking Dashboard</h2>
+    <div class="screenshots-grid">
+      <div class="screenshot-thumb wide" onclick="openLb(this)"><img src="../images/bms/banking_dashboard.png" alt="Banking Dashboard"><div class="ss-caption">Banking Analytics Dashboard — branch performance & customer insights</div></div>
+    </div>
+  </div>
+</div>
+<div id="lightbox" onclick="closeLb()"><button id="lb-close" onclick="closeLb()">✕</button><img id="lb-img" src="" alt=""></div>
+<footer class="site-footer"><p>Designed & built by <strong>Umang Mojidra</strong> · <a href="../index.html">Back to Portfolio</a></p></footer>
+<script src="../js/shared.js"></script>
+<script>function openLb(el){const img=el.querySelector('img');document.getElementById('lb-img').src=img.src;document.getElementById('lightbox').classList.add('open');}function closeLb(){document.getElementById('lightbox').classList.remove('open');}document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb();});</script>
+</body></html>
